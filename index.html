@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "stylesheet" type = "text/css" href = "css/reset.css " />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /> <!-- bootstrap nav-bar-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/> <!--- For modal -->
+    <link href="https://fonts.googleapis.com/css?family=Lora|Muli|Playfair+Display&display=swap" rel="stylesheet"> <!-- Google-fonts -->
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css " /> <!-- custom stylesheet-->
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script> <!--- Firebase --->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!--- For modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script><!--- For modal -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script><!--- For modal -->
+
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <!------- Nav-Bar Starts Here ------->
+    <header class="navbar fixed-top">
+        <div class="logo">Logo</div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Resume</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#myModal" data-toggle = "modal" data-target= "#myModal">Sign In</a></li>
+
+
+
+            </ul>
+        </nav>
+        <div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>
+
+    </header>
+    <!------- Nav-Bar Ends Here -->
+
+
+
+        <!-------- Parallax div Starts Here --------->
+        
+     
+    <!-- First Parallax Section with Heading and Paragraph -->
+    <div class="paral paralsec1">
+          <h1>Zeba Tahreen </h1>
+          <p>Full Stack Developer</p>
+          <img src="images/pic.jpg" alt = "Zeba pic" />
+    </div> 
+    <!--  Parallax Section with Heading and Paragraph  and white visible background -->
+    <div class="paral paralsec4">
+        <h1>Here is Heading 1</h1>
+        <p>This is a sample text.</p>
+       </div>   
+    
+    <!-- Second Parallax Section with Heading, Paragraph and Custom Button -->
+    <div class="paral paralsec2">
+    <h1>Here is Heading 2</h1>
+    <p>This is a sample text.</p>
+    <div class="button"><button><a href="#">This is a button</a></button></div>
+    </div>
+<!--  Parallax Section with Heading and Paragraph  and white visible background -->
+<div class="paral paralsec4">
+  <div class="row">
+    <div class="column sm-5">
+    </div>
+    <div class="column sm-7">
+      
+    <h1>Here is Heading 1</h1>
+    <p>This is a sample text.</p>
+
+    </div>
+  </div>
+     </div>   
+    
+    <!-- Third Parallax Section Heading, Paragraph and Weebly Button -->
+    <div class="paral paralsec3 " id ="paralsec3">
+    <h1>Here is Heading 3</h1>
+    <p>This is a sample text.</p>
+    <a class="wsite-button wsite-button-small wsite-button-normal" href="#">
+    <span class="wsite-button-inner">This is a link</span></a>
+    </div>
+    <!--  Parallax Section with Heading and Paragraph  and white visible background -->
+    <div class="paral paralsec4">
+        <h1>Here is Heading 1</h1>
+        <p>This is a sample text.</p>
+       </div>   
+    
+    
+    <!-------- Parallax div Ends Here --------->
+    
+    <!--------Sign In Modal Starts Here --------->
+    <div class="container">
+        <!-- Button to Open the Modal -->
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+          Open modal
+        </button> -->
+      
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Sign In / Register</h4>
+              </div>
+              
+              <!-- Modal body -->
+              <div class="modal-body">
+                    <div class="container" >
+                            <div class="row">
+                            <div class="col sm-6" >
+                                <label for="email">Email</label>
+                                <br>
+                                <br>
+                                <label for="password">Password</label> 
+                            </div>
+                            <div class="col sm-6">
+                                <input id="textEmail" type="email" placeholder=" Email">
+                                <br>  
+                                <br>      
+                                <input id="txtPassword" type="password" placeholder=" Password">
+                            </div>
+                        
+                            <button id="btnLogin" class="btn btn-action">Log In</button>
+                            <button id="btnSignup" class="btn btn-secondary">Sign Up</button>
+                            <button id="btnLogout" class="btn btn-action ">Log Out</button>
+                        </div>
+              </div>
+              
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>       
+<!--------Sign In Modal Ends Here --------->
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type= "text/javascript" src = "javascript/app.js"></script>
+    <script>
+    
+    // firebase config
+    var firebaseConfig = {
+    apiKey: "AIzaSyCjrHc8zxlez0t131bdrM0KDSuzvXo0EyE",
+    authDomain: "myportfolio-a2b11.firebaseapp.com",
+    databaseURL: "https://myportfolio-a2b11.firebaseio.com",
+    projectId: "myportfolio-a2b11",
+    storageBucket: "myportfolio-a2b11.appspot.com",
+    messagingSenderId: "40633890264",
+    appId: "1:40633890264:web:75439df33e8ec750"
+  };
+// Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    </script>
+
+</body>
+</html>

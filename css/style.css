@@ -1,0 +1,247 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: white;
+    background-attachment: fixed;
+    background-position: center; 
+    font-family: 'Playfair Display', serif;
+    font-family: 'Lora', serif;
+    font-family: 'Muli', sans-serif;
+
+
+}
+     /********** Nav-Bar Starts Here ********/
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to left,purple, red);
+    border-radius: 0 0 5px 5px ;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.842);
+
+}
+header .logo{
+    color: rgba(255, 255, 255, 0.842);;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    float: left;
+    font-weight: bold;
+}
+header nav {
+    float: right;
+}
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul li{
+    list-style: none;
+}
+header nav ul li a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: black;
+    background: rgba(255, 255, 255, 0.842);
+}
+.menu-toggle{
+    color: white;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 768px){
+
+    header{
+        padding: 0 20px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: linear-gradient(to right, rgb(240, 67, 67) , rgb(79, 79, 231));
+        top: 50px;
+        left: -100%;
+        transition: 0.5s;
+    }
+    header nav.active{
+        left:0;
+    }
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+    header nav ul li a {
+        border-bottom: 1px solid whitesmoke;
+        ;
+
+    }
+}
+
+
+/********** Nav-Bar Ends Here ********/
+
+/**********************/
+
+/********* Modal Starts Here **********/
+.modal-dialog{
+    margin: 10% 0 0 30%;
+    background-image: linear-gradient(to right, red , blue);
+    border-radius: 5px;
+
+
+}
+.modal-body{
+    padding: 50px;
+
+}
+.conatiner{
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+label {
+    display: inline-block;
+    /* margin: .4rem 0; */
+
+    /* line-height: 4.5mm; */
+}
+input {
+    border: 1px solid rgba(52, 52, 202, 0.774);
+    border-radius: 3px;
+}
+
+#btnLogin, #btnLogout, #btnSignup{
+        border: 1px solid ;
+        padding: 5px;
+        text-align: center;
+        color: #fff;
+        border-radius: 5px;
+        background-image: linear-gradient(to right, red , blue);
+        margin: 5% 0 5% 30%;            
+    
+}
+#btnSignup{
+    margin-left: 5px;
+}
+.btn-danger{
+    background-image: linear-gradient(to left, red , blue);
+    padding: 5px;
+
+}
+#btnLogout{
+    display: none;
+}
+/********* Modal Ends Here **********/
+
+/**********************/
+
+/**********Parallax Starts here ************/
+
+/* Base Parallax Element Style*/ 
+.paral {
+height: 600px;
+background-attachment: fixed;
+background-size: cover;
+background-position: 50% 50%;
+}
+/* Paragrapgh for Parallax Section  */
+.paral p {
+font-size: 20px;
+color:red;
+text-align: center;
+line-height: 4px;
+}
+
+/* Heading for Parallax Section  */
+.paral h1 {
+color:purple;
+font-size: 40px;
+text-align: center;
+padding-top: 100px;
+line-height: 100px;
+}
+.paral.paralsec1 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:40%; 
+    border: 1px solid purple;
+}
+
+/* Custom Button Element for Parallax Section */
+.paral button {
+font-size: 30px; 
+border-radius: 5px;
+color: #808080;
+background-color: #a0f0f0;
+padding: 6px 12px;
+line-height: 40px;
+vertical-align: middle;
+cursor: pointer;
+border: 1px solid transparent;
+}
+
+div.button {
+text-align: center;
+}
+
+
+/* Images for 3 Parallax Sections */
+.paralsec1 {    
+background-image: url("whitenew.jpg");
+}
+.paralsec2 {
+background-image: url("white1.jpg");
+}
+.paralsec3 {
+background-image: url("wp3.jpg");
+}
+.paralsec4 {    
+    background-color:white;
+
+    }
+/* Custom Button Element for Parallax Section */
+.paral button {
+    font-size: 30px; 
+    border-radius: 5px;
+    color: #808080;
+    background-color: #a0f0f0;
+    padding: 6px 12px;
+    line-height: 40px;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    }
+    
+    div.button {
+    text-align: center;
+    }
+
+/**********Parallax Ends here ************/
+
+/**********************/
+
+/***** Firebase *****/
+
+
+
