@@ -1,73 +1,72 @@
-$(document).ready(function(){
-// toggel bar
-    $(".menu-toggle").click(function(){
-        $("nav").toggleClass("active")
-    });
+$(document).ready(function () {
+  // firebase config
+  var firebaseConfig = {
+    apiKey: "AIzaSyCjrHc8zxlez0t131bdrM0KDSuzvXo0EyE",
+    authDomain: "myportfolio-a2b11.firebaseapp.com",
+    databaseURL: "https://myportfolio-a2b11.firebaseio.com",
+    projectId: "myportfolio-a2b11",
+    storageBucket: "myportfolio-a2b11.appspot.com",
+    messagingSenderId: "40633890264",
+    appId: "1:40633890264:web:75439df33e8ec750"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
-// manage user  
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
-      $("#btnLogin").style.display="block";
-      $("#btnLogout").style.display="none";
 
-    } else {
-      // No user is signed in.
-      $("#btnLogin").style.display="none";
-      $("#btnLogout").style.display="block";
-    }
-  }); 
+  $("#btnSignup").on("click", CreateUser)
+  $("#btnLogin").on("click", SignInUser)
+  $("#btnLogout").on("click", LogoutUser)
 
-// on click function
-  $("#btnLogin").click(function(){
-
-      var txtEmail = $("#textEmail").val();
-      var txtPassword= $("#txtPassword").val();
-      var btnLogin = $("#btnLogin");
-      var btnSignup = $("#btnSignup");
-      var btnLogout = $("#btnLogout");
-
-    //   alert(txtEmail + " " + txtPassword );
-
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
+  function CreateUser() {
+    var email = $("#textEmail").val();
+    var password= $("#txtPassword").val();
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+      if (error) {
         var errorCode = error.code;
         var errorMessage = error.message;
-        // ...
-      });
-
-
+        console.log(errorCode, errorMessage)
+      } else {
+        console.log("User created: " + email)
+      }
     });
+    var email = $("#textEmail").val("");
+    var password= $("#txtPassword").val("");
+  }
 
-    //   // add login event
-    //   btnLogin.click(e =>{
-    //       var email = txtEmail.val();
-    //       var pass = txtPassword.val();
-    //       var auth = firebase.auth();
-    //       // Sign in
+  function SignInUser() {
+    var email = $("#textEmail").val();
+    var password= $("#txtPassword").val();
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .catch(function (error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
+      var email = $("#textEmail").val("");
+    var password= $("#txtPassword").val("");
+  }
+  
+  function LogoutUser() {
+    firebase.auth().signOut().then(function () {
+      console.log("Sign-out successful.")
+    }).catch(function (error) {
+      console.log("An error happened.")
+    });
+  }
 
-    //       var promise = auth.signInWithEmailAndpassword(email,pass);
-    //       promise.catch(e => console.log(e.message));
-    //   // add signin event
-    //   btnLogin.click(e =>{
-    //     var email = txtEmail.val();
-    //     var pass = txtPassword.val();
-    //     var auth = firebase.auth();
-    //     // Sign in
-
-    //     var promise = auth.signInWithEmailAndpassword(email,pass);
-    //     promise.catch(e => console.log(e.message));
-    // // add signin event
-          
-
-    //   })
-    // })
-
-
-
-      
-
-
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+      console.log("User signed in: ", user)
+      $("#btnLogin").hide();
+      $("#btnLogout").show();
+      $("#btnSignup").hide();
+    } else {
+      console.log("No one signed in!");
+      $("#btnLogin").show();
+      $("#btnLogout").hide();
+      $("#btnSignup").show();
+    }
+  })
 
 
 })

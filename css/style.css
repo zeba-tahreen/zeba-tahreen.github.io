@@ -11,6 +11,7 @@ body {
     font-family: 'Playfair Display', serif;
     font-family: 'Lora', serif;
     font-family: 'Muli', sans-serif;
+    font-weight: 200px;
 
 
 }
@@ -171,6 +172,13 @@ color:red;
 text-align: center;
 line-height: 4px;
 }
+.paralsec4 p{
+    line-height: 26px;
+    padding: 2%;
+}
+.row {
+padding: 5%;
+}
 
 /* Heading for Parallax Section  */
 .paral h1 {
@@ -186,6 +194,21 @@ line-height: 100px;
     margin-right: auto;
     border-radius:40%; 
     border: 1px solid purple;
+}
+.paralsec1 .social-icons {
+    position: absolute;
+    display: center;
+    
+    border:1px solid orange;
+}
+ul li {
+    float: left;
+    padding-left: 10px;
+    list-style-type: none;
+  
+
+/* padding-top: 100px; */
+
 }
 
 /* Custom Button Element for Parallax Section */
@@ -214,7 +237,9 @@ background-image: url("whitenew.jpg");
 background-image: url("white1.jpg");
 }
 .paralsec3 {
-background-image: url("wp3.jpg");
+background-image: url("whitero.jpg");
+text-align: right;
+color: black;
 }
 .paralsec4 {    
     background-color:white;
