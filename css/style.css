@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: white;
+    background:transparent;
     background-attachment: fixed;
     background-position: center; 
     font-family: 'Playfair Display', serif;
@@ -26,10 +26,9 @@ header {
 
 }
 header .logo{
-    /* color: rgb(49, 121, 131); */
-color: white;
-    height: 50px;
-    line-height: 50px;
+    color: white;
+    height: 35px;
+    line-height: 35px;
     font-size: 24px;
     float: left;
     font-weight: bold;
@@ -46,8 +45,8 @@ header nav ul li{
     list-style: none;
 }
 header nav ul li a {
-    height: 50px;
-    line-height: 50px;
+    height: 35px;
+    line-height: 35px;
     padding: 0 20px;
     color: white;
     text-decoration: none;
@@ -61,7 +60,7 @@ header nav ul li a.active {
 .menu-toggle{
     color: white;
     float: right;
-    line-height: 50px;
+    line-height: 35px;
     font-size: 24px;
     cursor: pointer;
     display: none;
@@ -77,9 +76,9 @@ header nav ul li a.active {
     header nav {
         position: absolute;
         width: 100%;
-        height: calc(100vh - 50px);
+        height: calc(100vh - 35px);
         background: linear-gradient(to right, rgb(49, 121, 131) ,rgb(112, 90, 90));
-        top: 50px;
+        top: 35px;
         left: -100%;
         transition: 0.5s;
     }
@@ -127,7 +126,7 @@ label {
     /* line-height: 4.5mm; */
 }
 input {
-    border: 1px solid rgba(52, 52, 202, 0.774);
+    border: none;
     border-radius: 3px;
 }
 
@@ -375,6 +374,11 @@ background-image: url("wp5.png");
 .paralsec6 {    
     background-image: url("wp3.jpg");
 }
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
 
 /**********Parallax Ends here ************/
 
@@ -493,6 +497,7 @@ img {vertical-align: middle;}
     text-align: left;
     padding: 3%;
     color: black;
+    border: none;
     background: rgba(255, 255, 255, 0.726);
     width: 70%;
     height:auto;
@@ -502,6 +507,29 @@ img {vertical-align: middle;}
 
 }
 /*****Contact form Ends here ******/
+
+/***** Footer Starts here ******/
+
+
+.footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    /* margin-top: -50px; */
+    padding: 2%;
+    word-spacing: 2em;    
+    font-size: 5px;   
+    background-color:rgba(27, 26, 26, 0.74);
+    border-radius:  5px 5px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.842);
+
+}
+
+/***** Footer Ends here ******/
+
 
 
 
