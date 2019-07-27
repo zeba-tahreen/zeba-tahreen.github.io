@@ -1,4 +1,4 @@
-*{
+*{ 
     box-sizing: border-box;
 }
 body {
@@ -160,7 +160,7 @@ input {
 /* Base Parallax Element Style*/ 
 
 .paralsec1, .paralsec2, .paralsec3, .paralsec4, .paralsec5, .paralsec6{ 
-height: 700px;
+height: 800px;
 background-attachment: fixed;
 background-size: cover;
 background-position: 50% 50%;
@@ -209,12 +209,14 @@ width: 40% auto;
     float: left;
     padding: 0 0 0 5%;
     margin: 0;
+    margin-top: 5%;
     color: rgb(49, 121, 131);
     width: 30%;
     text-align: center;
 
 }
 .sm-5-right {
+
     width: 65%;
     position: relative;
     float: left;
@@ -223,6 +225,7 @@ width: 40% auto;
     text-align: right;
     line-height: 40px;
     margin-left: 0;
+    margin-top: 5%;
 }
 #para{
     text-align: center;
@@ -254,9 +257,16 @@ ul li {
 /*sec2 css*/
 
 /*sec3 css*/
-
+.paralsec3{
+    width: 100%; /*can be in percentage also.*/
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
 .content{
-    margin:  5px auto 0 auto;   
+    margin-top: 10%;
+    margin-left: 15%;
     text-align: center;
     padding: 3%;
     color: black;
@@ -265,7 +275,7 @@ ul li {
     height:auto;
     -moz-box-shadow:    inset 0 0 10px #000000;
     -webkit-box-shadow: inset 0 0 10px #000000;
-     box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
     
 }
 
@@ -299,12 +309,14 @@ ul li {
 /*sec3 css*/
 
 /*sec4 css*/
+
 .row4{
     padding: 0;
 }
 .resume-left{
     float: left;
     margin-left: 0;
+    margin-top: 5%;
     width: 60%;
     height: 700px;
 }
@@ -323,6 +335,7 @@ ul li {
 .resume-right {
     float: left;
     text-align: center;
+    margin-top: 5%;
     margin-left: 0;
     width: 40%;
     height: auto;
@@ -354,6 +367,7 @@ h3{
 
 }
 /*sec4 css*/
+
 
 /* Images for Parallax Sections */
 .paralsec1 {    
@@ -477,8 +491,14 @@ img {vertical-align: middle;}
 /***** Image SlideShow Starts Here *****/
 
 /*****Contact form Starts here ******/
+.paralsec6{
+    width: 100%; /*can be in percentage also.*/
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
 .contact-header{
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left: 2%;
     text-align: center;
     padding: 10px;
@@ -493,13 +513,13 @@ img {vertical-align: middle;}
 }
 #contact-form{
     float: left;
-    margin:  15px auto 0 auto;   
+    margin:  2% 0 0 2%;   
     text-align: left;
     padding: 3%;
     color: black;
     border: none;
     background: rgba(255, 255, 255, 0.726);
-    width: 70%;
+    width: 60%;
     height:auto;
     -moz-box-shadow:    inset 0 0 10px #000000;
     -webkit-box-shadow: inset 0 0 10px #000000;
