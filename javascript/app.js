@@ -3,7 +3,7 @@ $(document).ready(function () {
   $(".menu-toggle").click(function(){
     $("nav").toggleClass("active")
 });
-
+ 
   // // firebase config
   // var firebaseConfig = {
   //   apiKey: "AIzaSyCjrHc8zxlez0t131bdrM0KDSuzvXo0EyE",
