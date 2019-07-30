@@ -410,6 +410,11 @@ img {vertical-align: middle;}
   box-shadow:-1em 0 5em rgb(49, 121, 131);
 
 }
+#imagename{
+    color: rgb(49, 121, 131);
+    font-weight: bolder;
+
+}
 
 /* Caption text */
 .text {
